@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-rappel',
   templateUrl: './rappelSession.component.html',
@@ -16,7 +17,6 @@ export class RappelSessionComponent implements OnInit {
   responsabilite: string;
   dateD: string;
   dateF: string
-
   ngOnInit() {
 
     this.service.get(window.location.origin + "/api/Elections/" + this.router.url.split('/')[2]).subscribe(result => {
